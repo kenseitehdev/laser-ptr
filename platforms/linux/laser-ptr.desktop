@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=laser-ptr
+Comment=Keep the computer awake
+Exec=laser-ptr
+Icon=laser-ptr
+Terminal=false
+Categories=Utility;System;
+StartupNotify=false

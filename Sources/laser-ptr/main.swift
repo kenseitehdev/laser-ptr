@@ -117,6 +117,11 @@ final class LaserPTRAppDelegate: NSObject, NSApplicationDelegate {
         let dark = NSApp.effectiveAppearance.bestMatch(from: [.darkAqua, .aqua]) == .darkAqua
         let pointerColor: NSColor = dark ? .white : .black
         let image = NSImage(size: size, flipped: false) { _ in
+            // The pointer now shines left, away from the menu-bar clock.
+            let transform = NSAffineTransform()
+            transform.translateX(by: size.width, yBy: 0)
+            transform.scaleX(by: -1, yBy: 1)
+            transform.concat()
             if self.isActive {
                 let beam = NSBezierPath()
                 beam.move(to: NSPoint(x: 11, y: 8))
