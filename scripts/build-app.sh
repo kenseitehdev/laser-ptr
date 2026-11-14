@@ -5,8 +5,9 @@ ROOT=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
 APP="$ROOT/build/laser-ptr.app"
 CONTENTS="$APP/Contents"
 
-mkdir -p "$CONTENTS/MacOS"
+mkdir -p "$CONTENTS/MacOS" "$CONTENTS/Resources"
 cp "$ROOT/Resources/Info.plist" "$CONTENTS/Info.plist"
+cp "$ROOT/Resources/AppIcon.icns" "$CONTENTS/Resources/AppIcon.icns"
 swiftc \
     -O \
     -parse-as-library \

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=laser-ptr
+Comment=Keep the computer and display awake
+Exec=laser-ptr
+Icon=video-display
+Terminal=false
+Categories=Utility;System;
